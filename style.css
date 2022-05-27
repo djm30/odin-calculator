@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Scientific Calculator LCD', sans-serif;
+    background-color: #dedede;
+}
+
+.heading{
+    margin-top: 50px;
+    color: rgb(240, 46, 169);
+}
+
+.footer{    
+    font-family: 'BIZ UDPGothic', sans-serif;
+    margin-top: 200px;
+    height: 80px;
+    background-color: #3A445D;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px dashed white;
+    transition: all 200ms;
+}
+
+.footer a:hover{
+    border-bottom: 2px solid white;
+}
+
+.footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    
+}
+
+.display{
+    margin-top: 60px;
+    height: 200px;
+    width: 800px;
+}
+
+.buttons{
+    margin-top: 60px;
+    width: 900px;
+    height: 400px;
+}
