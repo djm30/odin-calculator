@@ -96,7 +96,36 @@ const handleOperatorInput = (input) => {
             operatorInput = input;
         }
     }
+    showInput();
 };
+
+const handleDecimal = () => {
+    handleInput(".");
+    isDecimal = true;
+    showInput();
+};
+
+const handleEquals = () => {
+    if (parseFloat(secondNum)) {
+        let calculationResult = Math.round(calculate() * 1000) / 1000;
+        console.log(calculationResult);
+        input.innerText = `${firstNum} ${operatorInput} ${secondNum}`;
+        result.innerText = calculationResult;
+        prevResult = calculationResult;
+        equalsPressed = true;
+        reset();
+    }
+};
+
+// KEYBOARD INPUT
+document.addEventListener("keypress", (e) => {
+    console.log(e.key);
+    if (parseFloat(e.key) || e.key === "0") handleInput(e.key);
+    if (e.key === "=" || e.key === "Enter") handleEquals();
+    if (e.key === ".") handleDecimal();
+    if (e.key === "x" || e.key === "/" || e.key === "+" || e.key === "-")
+        handleOperatorInput(e.key);
+});
 
 // NUMBERS EVENT LISTENER
 numbers.forEach((num) => {
@@ -109,26 +138,15 @@ numbers.forEach((num) => {
 operators.forEach((operator) => {
     operator.addEventListener("click", (e) => {
         handleOperatorInput(operator.dataset.value);
-        showInput();
     });
 });
 
 // DECIMAL EVENT LISTENER
 decimal.addEventListener("click", (e) => {
-    handleInput(".");
-    isDecimal = true;
-    showInput();
+    handleDecimal();
 });
 
 // EQUALS EVENT LISTENER
 equals.addEventListener("click", (e) => {
-    if (parseFloat(secondNum)) {
-        let calculationResult = calculate();
-        console.log(calculationResult);
-        input.innerText = `${firstNum} ${operatorInput} ${secondNum}`;
-        result.innerText = calculationResult;
-        prevResult = calculationResult;
-        equalsPressed = true;
-        reset();
-    }
+    handleEquals();
 });
