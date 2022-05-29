@@ -5,13 +5,14 @@
 }
 
 body{
-    font-family: 'Scientific Calculator LCD', sans-serif;
-    background-color: #dedede;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    /* font-family: 'Scientific Calculator LCD', sans-serif; */
+    /* background-color: #dedede; */
+    background-color: #88A2AA;
 }
 
 .heading{
     margin-top: 50px;
-    color: rgb(240, 46, 169);
 }
 
 .footer{    
@@ -53,19 +54,71 @@ body{
 
 .card{
     border-radius: 20px;
-    background-color: #ffffff;
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    /* background-color: #ffffff; */
+    background-color: #D9F7FA;
+    box-shadow: rgba(0, 0, 0, 0.611) 5px 5px, rgba(36, 35, 36, 0.285) 10px 10px, rgba(61, 57, 59, 0.2) 15px 15px, rgba(93, 89, 92, 0.1) 20px 20px, rgba(58, 57, 58, 0.05) 25px 25px;
     
 }
 
 .display{
     margin-top: 60px;
     height: 200px;
-    width: 800px;
+    width: 500px;
 }
 
 .buttons{
+    padding: 30px;
     margin-top: 60px;
-    width: 900px;
-    height: 400px;
+    width: 500px;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 400;
+    gap: 20px;
+    /* font-family: 'BIZ UDPGothic', sans-serif; */
+}
+
+.button{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(0, 0, 0) 5px 5px, rgba(36, 35, 36, 0.285) 10px 10px;
+    user-select: none;
+    font-family: inherit;
+    background-color: #F9F8F8;
+}
+
+.button:hover{
+    transform: translate(-2px, -2px);
+    box-shadow: rgb(0, 0, 0) 5px 5px, rgba(36, 35, 36, 0.285) 12px 12px
+}
+
+.button:active{
+    transform: translate(5px, 5px);
+    box-shadow:rgb(0, 0, 0) 5px 5px ;
+}
+
+.end{
+    display: flex;
+    justify-content: end;
+}
+
+.display{
+    padding: 40px;
+}
+
+.input{
+    padding: 0px;
+    font-size: 36px;
+    margin-bottom: 16px;
+    height: 46px ;
+    align-items: center;
+}
+
+.result{
+    /* padding: 0px; */
+    font-size: 56px;
+    height: 72px;
+    align-items: center;
 }
