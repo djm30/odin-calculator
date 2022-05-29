@@ -82,7 +82,6 @@ body{
     grid-template-columns: repeat(4, 1fr);
     padding: 400;
     gap: 20px;
-
 }
 
 .button{
